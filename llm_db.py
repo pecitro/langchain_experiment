@@ -43,3 +43,14 @@ while True:
         m1.save_context({"input": query}, {"output": response})
     else:
         break
+
+# Result:
+# Human: artistsの数はいくつですか
+# AI: There are 275 artists in the database.
+# Human:  employeesの数はいくつですか
+# AI: There are 8 employees in the database.
+# Human: 1つ前の質問と2つ前の質問の合計はいくつですか
+# SQLQuery:SELECT COUNT(*) FROM artists;
+# SQLResult: [(275,)]
+# Answer:There are 283 entries in total between artists and employees in the database.
+# > Finished chain.
